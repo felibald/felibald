@@ -1,0 +1,36 @@
+let humanScore = 0;
+let computerScore = 0;
+let currentRoundNumber = 1;
+
+// Write your code below:
+
+const generateTarget=()=>{
+   return Math.round( Math.random() *9)
+}
+
+
+const CompareGuesses=(human,comp,secret)=>{
+  const diff1=Math.abs(human - secret)
+  const diff2=Math.abs(comp - secret)
+  if (diff1 >= diff2){
+
+    return true
+  }
+  else{
+    return false
+  }
+}
+
+
+const updateScore=(winner)=>{
+  if(winner ==='human'){
+    humanScore +=1
+  }
+  else{
+    computerScore +=1
+  }
+   
+   
+const advanceRound=()=>{
+  currentRoundNumber +=1
+}
